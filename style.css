@@ -1,0 +1,239 @@
+/* Base styling with a clean, modern look and vibrant accents */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f7f7f7;
+  color: #333;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+/* Background Religious Symbols */
+.background-symbols {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Ensure symbols are behind other content */
+}
+
+.symbol {
+  position: absolute;
+  font-size: 3rem;
+  color: rgba(255, 111, 97, 0.3); /* Light orange color with transparency */
+  animation: blinkAndMove 10s infinite ease-in-out;
+  user-select: none; /* Prevent text selection */
+}
+
+/* Positioning Symbols Randomly */
+.symbol-1 { top: 10%; left: 5%; animation-delay: 0s; }
+.symbol-2 { top: 20%; left: 80%; animation-delay: 2s; }
+.symbol-3 { top: 30%; left: 15%; animation-delay: 4s; }
+.symbol-4 { top: 40%; left: 70%; animation-delay: 6s; }
+.symbol-5 { top: 50%; left: 25%; animation-delay: 8s; }
+.symbol-6 { top: 60%; left: 85%; animation-delay: 10s; }
+.symbol-7 { top: 70%; left: 10%; animation-delay: 12s; }
+.symbol-8 { top: 80%; left: 75%; animation-delay: 14s; }
+.symbol-9 { top: 90%; left: 20%; animation-delay: 16s; }
+.symbol-10 { top: 5%; left: 50%; animation-delay: 18s; }
+.symbol-11 { top: 15%; left: 90%; animation-delay: 20s; }
+.symbol-12 { top: 25%; left: 60%; animation-delay: 22s; }
+
+@keyframes blinkAndMove {
+  0%, 100% {
+    opacity: 0.3;
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    opacity: 0.7;
+    transform: translateY(-20px) rotate(20deg);
+  }
+  50% {
+    opacity: 0.3;
+    transform: translateY(20px) rotate(-20deg);
+  }
+  75% {
+    opacity: 0.7;
+    transform: translateY(-10px) rotate(10deg);
+  }
+}
+
+/* Header styling with animated Hindu symbol */
+header {
+  position: relative;
+  text-align: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #FFECB3, #FFE0B2);
+  color: #333;
+  overflow: hidden;
+  animation: fadeIn 2s ease-in;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin: 0.5rem 0;
+  position: relative;
+  z-index: 2;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+}
+
+/* Animated Hindu symbol in header */
+.hindu-symbol {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 80px;
+  height: 80px;
+  z-index: 1;
+  opacity: 0.8;
+  animation: rotateSymbol 8s linear infinite;
+}
+
+.hindu-symbol svg {
+  width: 100%;
+  height: 100%;
+  fill: #FF6F61;
+}
+
+@keyframes rotateSymbol {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Layout: main content with survey on the left and result panel on the right */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+#survey {
+  flex: 1 1 300px;
+  max-width: 500px;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  animation: slideInLeft 1s ease-out;
+}
+
+aside#result {
+  flex: 1 1 300px;
+  max-width: 350px;
+  background: #FF6F61;
+  color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  animation: slideInRight 1s ease-out forwards;
+  position: relative;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-top: 1rem;
+}
+
+form input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  border: 2px solid #FF6F61;
+  border-radius: 4px;
+}
+
+form button {
+  margin-top: 1.5rem;
+  padding: 0.75rem;
+  font-size: 1.2rem;
+  background: #FF6F61;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+form button:hover {
+  background: #e85d50;
+  transform: scale(1.05);
+}
+
+/* Result section styles */
+#result h2, #result h3 {
+  margin-top: 0;
+}
+
+#progressBarContainer {
+  width: 100%;
+  background: rgba(255,255,255,0.3);
+  border-radius: 20px;
+  margin: 1rem 0;
+  height: 20px;
+  overflow: hidden;
+}
+
+#progressBar {
+  width: 0%;
+  height: 100%;
+  background: #fff;
+  border-radius: 20px;
+  animation: growBar 2s forwards;
+  --score-percentage: 0%;
+}
+
+/* Footer styling */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #333;
+  color: #fff;
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes growBar {
+  from { width: 0%; }
+  to { width: var(--score-percentage); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+  aside#result {
+    width: 100%;
+    max-width: none;
+    margin-top: 1rem;
+  }
+}

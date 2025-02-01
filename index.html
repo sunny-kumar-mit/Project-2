@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mindful Mentor – Your AI Mood & Stress Advisor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Background Religious Symbols -->
+  <div class="background-symbols">
+    <!-- Hinduism -->
+    <div class="symbol symbol-1">&#x1F549;</div> <!-- Om Symbol -->
+    <div class="symbol symbol-2">&#x2625;</div> <!-- Lotus Symbol -->
+
+    <!-- Christianity -->
+    <div class="symbol symbol-3">&#x271D;</div> <!-- Cross Symbol -->
+    <div class="symbol symbol-4">&#x2626;</div> <!-- Chi Rho Symbol -->
+
+    <!-- Islam -->
+    <div class="symbol symbol-5">&#xFDFD;</div> <!-- Star and Crescent Symbol -->
+    <div class="symbol symbol-6">&#x262A;</div> <!-- Star and Crescent (Alternate) -->
+
+    <!-- Buddhism -->
+    <div class="symbol symbol-7">&#x2638;</div> <!-- Dharma Wheel -->
+    <div class="symbol symbol-8">&#x2621;</div> <!-- Yin Yang -->
+
+    <!-- Judaism -->
+    <div class="symbol symbol-9">&#x2721;</div> <!-- Star of David -->
+    <div class="symbol symbol-10">&#x2135;</div> <!-- Aleph Symbol -->
+
+    <!-- Other Symbols -->
+    <div class="symbol symbol-11">&#x262F;</div> <!-- Peace Symbol -->
+    <div class="symbol symbol-12">&#x262E;</div> <!-- Peace (Alternate) -->
+  </div>
+
+  <header>
+    <div class="hindu-symbol">
+      <!-- Animated Hindu Om symbol SVG -->
+      <svg viewBox="0 0 512 512">
+        <path d="M256 32C132.3 32 32 132.3 32 256s100.3 224 224 224 224-100.3 224-224S379.7 32 256 32zm0 400c-97 0-176-79-176-176S159 80 256 80s176 79 176 176-79 176-176 176z"/>
+        <path d="M330.7 175.3c-10.5-8.3-25.1-8.3-35.6 0l-45.1 35.7-45.1-35.7c-10.5-8.3-25.1-8.3-35.6 0s-8.3 21.8 0 30.1l66.3 52.5v112.6c0 13.3 10.7 24 24 24s24-10.7 24-24V257.9l66.3-52.5c8.3-8.3 8.3-21.8 0-30.1z"/>
+      </svg>
+    </div>
+    <h1>Mindful Mentor</h1>
+    <p>Your AI-powered guide to better mental well‑being</p>
+  </header>
+
+  <main>
+    <section id="survey">
+      <h2>Tell Us About Your Day</h2>
+      <form id="wellbeingForm">
+        <label for="sleep">Hours of sleep last night:</label>
+        <input type="number" id="sleep" name="sleep" min="0" step="0.1" required />
+
+        <label for="exercise">Number of exercise sessions this week:</label>
+        <input type="number" id="exercise" name="exercise" min="0" required />
+
+        <label for="stress">Work stress level today (1 = low, 10 = high):</label>
+        <input type="number" id="stress" name="stress" min="1" max="10" required />
+
+        <button type="submit">Get Your Well-Being Score</button>
+      </form>
+    </section>
+
+    <!-- The result panel appears on the right side -->
+    <aside id="result" class="hidden">
+      <h2>Your Well-Being Score: <span id="scoreDisplay"></span></h2>
+      <div id="progressBarContainer">
+        <div id="progressBar"></div>
+      </div>
+      <h3>Recommendations:</h3>
+      <ul id="recommendations"></ul>
+    </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Mindful Mentor</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

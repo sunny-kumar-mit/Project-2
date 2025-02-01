@@ -1,0 +1,21 @@
+{
+    "recommendations": [
+      {
+        "minRating": 80,
+        "tip": "Aim for 7–9 hours of sleep each night to boost your mood."
+      },
+      {
+        "minRating": 75,
+        "tip": "Incorporate at least 5 exercise sessions per week to increase energy."
+      },
+      {
+        "minRating": 85,
+        "tip": "Reduce work stress by practicing mindfulness or meditation."
+      },
+      {
+        "minRating": 60,
+        "tip": "Consider professional advice if your overall well-being is low."
+      }
+    ]
+  }
+  
